@@ -1,4 +1,3 @@
-
 // Hamburger Menu
 // DOM Event Steps:
 
@@ -52,8 +51,8 @@ function plusSlides(n) {
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("slides");
-  let dots = document.getElementsByClassName("indicator");
-  let captionText = document.getElementById("caption");
+  let dots = document.getElementsByClassName("demo");
+//   let captionText = document.getElementById("caption");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
@@ -64,6 +63,6 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
+//   captionText.innerHTML = dots[slideIndex-1].alt;
   setTimeout(showSlides, 10000); // Change image every 10 seconds
 }
